@@ -4,7 +4,7 @@ public class SuperArray {
 
   public SuperArray() {
     size = 0;
-    capacity = new String[10];
+    data = new String[10];
   }
 
   public int size() {
@@ -12,6 +12,8 @@ public class SuperArray {
   }
 
   public boolean add (String element) {
-    for (int i = 0; i < s)
+    data [size] = element;
+    size++;
+    return true;
   }
 }
