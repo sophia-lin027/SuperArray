@@ -26,4 +26,11 @@ public class SuperArray {
     data [index] = element;
     return x;
   }
+
+  private void resize() {
+    String[] words = new String[20];
+    for (int i = 0; i < data.length; i++) {
+      words[i] = data[i];
+    }
+  }
 }
