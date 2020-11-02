@@ -7,4 +7,12 @@ public class SuperArray {
     size = 0;
     capacity = new String[10];
   }
+
+  public int size() {
+    count = 0;
+    for (int i = 0; i < new_array.length; i++) {
+      count++;
+    }
+    return count;
+  }
 }
