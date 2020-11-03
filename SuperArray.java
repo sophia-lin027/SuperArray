@@ -37,4 +37,8 @@ public class SuperArray {
     }
     data = words;
   }
-}
+
+  public boolean isEmpty() {
+    return size == 0;
+    }
+  }
