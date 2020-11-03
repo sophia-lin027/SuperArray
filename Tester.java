@@ -1,6 +1,8 @@
 public class Tester {
   public static void main (String[] args) {
     SuperArray words = new SuperArray();
+    SuperArray test = new SuperArray();
+
     words.add("kani");
     words.add("uni");
     words.add("ebi");
@@ -16,5 +18,7 @@ public class Tester {
       }
       System.out.println(words.get(i));
     }
+
+    System.out.println(test.isEmpty());
   }
 }
