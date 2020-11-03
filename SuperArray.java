@@ -46,4 +46,12 @@ public class SuperArray {
     size = 0;
     data = new String[10];
   }
+
+  public String toString() {
+    String result = "[" + data[0];
+    for (int i = 1; i < data.length; i++) {
+      result = result + ", " + data[i];
+    }
+    return result + "]";
+  }
 }
