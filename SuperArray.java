@@ -50,7 +50,9 @@ public class SuperArray {
   public String toString() {
     String result = "[" + data[0];
     for (int i = 1; i < data.length; i++) {
-      result = result + ", " + data[i];
+      if (data[i] != null) {
+        result = result + ", " + data[i];
+      }
     }
     return result + "]";
   }
