@@ -9,9 +9,9 @@ public class Tester {
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i));
     }
-    for (int i = 0; i < 10; i++) {
-      words.add("again");
-    }
+    //for (int i = 0; i < 10; i++) {
+      //words.add("again");
+    //}
     for (int i = 0; i < words.size(); i++) {
       if (!words.get(i).equals("again")) {
         System.out.println("hm");
@@ -20,5 +20,8 @@ public class Tester {
     }
 
     System.out.println(test.isEmpty());
+    System.out.println(words.toString());
+    System.out.println(words.contains("kani"));
+    System.out.println(words.contains("hello"));
   }
 }
