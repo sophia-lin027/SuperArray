@@ -68,4 +68,17 @@ public class SuperArray {
     }
     return false;
   }
+
+  public SuperArray (int initalCapacity) {
+    size = 0;
+    data = new String[initalCapacity];
+  }
+
+  public void add (int index, String element) {
+    for (int i = size; i > index; i--) {
+      data[i] = data[i - 1];
+    }
+    data[index] = element;
+    size++;
+  }
 }
