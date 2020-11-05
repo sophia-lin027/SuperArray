@@ -48,22 +48,24 @@ public class SuperArray {
   }
 
   public String toString() {
-    String result = "[" + data[0];
-    for (int i = 1; i < size; i++) {
+    String result = "[";
+    for (int i = 0; i < size; i++) {
       if (data[i] != null) {
-        result = result + ", " + data[i];
+        if (i != size - 1) {
+          result = result + data[i] + ", ";
+        }
+        else {
+          result = result + data[i];
+        }
       }
     }
     return result + "]";
   }
 
   public boolean contains(String s){
-    for (int i = 0; i < data.length; i++) {
-      if (data[i].equals(s)) {
+    for (int i = 0; i < size; i++) {
+      if (s.equals(data[i])) {
         return true;
-      }
-      else {
-        return false;
       }
     }
     return false;
@@ -88,14 +90,14 @@ public class SuperArray {
     for (int i = index; i < size() - 1; i++) {
       data[i] = data[i + 1];
     }
-    data[size() - 1] = null;
+    //data[size() - 1] = null;
     size--;
     return x;
   }
 
   public int indexOf (String s) {
     for (int i = 0; i < size; i++) {
-      if (data[i] == s) {
+      if (s.equals(data[i])) {
         return i;
       }
     }
