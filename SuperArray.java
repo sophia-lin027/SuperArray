@@ -84,15 +84,16 @@ public class SuperArray {
 
   public String remove (int index) {
     String x = data[index];
-    for (int i = index; i < data.length - 1; i++) {
+
+    for (int i = index; i < size(); i++) {
       data[i] = data[i + 1];
     }
-    size++;
+
+    size--;
     return x;
   }
 
   public int indexOf (String s) {
-    int result = 0;
     for (int i = 0; i < size; i++) {
       if (data[i] == s) {
         return i;
