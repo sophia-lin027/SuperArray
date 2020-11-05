@@ -35,5 +35,6 @@ public class Tester {
     System.out.println(words);
     words.add(1, "hi");
     System.out.println(words);
+    System.out.println(words.remove(0));
   }
 }
