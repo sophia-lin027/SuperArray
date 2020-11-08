@@ -38,5 +38,6 @@ public class Demo{
     System.out.println(a);
     System.out.println(b);
     System.out.println(findOverlap(a, b));
+    System.out.println(words.lastIndexOf("una"));
   }
 }
