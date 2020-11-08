@@ -38,5 +38,16 @@ public class Tester {
     System.out.println(words.remove(0));
     System.out.println(words);
     System.out.println(words.indexOf("hey"));
+
+    SuperArray work = new SuperArray();
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j <= 4; j++) {
+        work.add(Integer.toString(j));
+      }
+    }
+    System.out.println(work.remove(19));
+    System.out.println(work);
+
+    System.out.println(words.lastIndexOf("uni"));
   }
 }
