@@ -71,9 +71,12 @@ public class SuperArray {
     return false;
   }
 
-  public SuperArray (int initalCapacity) {
+  public SuperArray (int initialCapacity) {
+    if (initialCapacity < 0.0) {
+      throw new IllegalArgumentException("The initial capacity " + initialCapacity + " cannot be negative");
+    }
     size = 0;
-    data = new String[initalCapacity];
+    data = new String[initialCapacity];
   }
 
   public void add (int index, String element) {
