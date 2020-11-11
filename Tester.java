@@ -52,5 +52,9 @@ public class Tester {
     System.out.println(work);
 
     System.out.println(words.lastIndexOf("uni"));
+    System.out.println(test1);
+    System.out.println(test1.get(2));
+    //System.out.println(test1.get(-1));
+    //System.out.println(test1.get(3));
   }
 }
