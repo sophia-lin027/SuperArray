@@ -3,6 +3,7 @@ public class Tester {
     SuperArray words = new SuperArray();
     SuperArray test = new SuperArray();
     SuperArray test1 = new SuperArray(5);
+    //SuperArray test2 = new SuperArray(-2);
 
     words.add("kani");
     words.add("uni");
@@ -34,6 +35,8 @@ public class Tester {
 
     System.out.println(words);
     words.add(1, "hi");
+    //words.add(-1, "test");
+    //words.add(20, "test");
     System.out.println(words);
     System.out.println(words.remove(0));
     System.out.println(words);
