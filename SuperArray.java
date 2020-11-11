@@ -106,6 +106,13 @@ public class SuperArray {
   }
 
   public String remove (int index) {
+    if (index < 0.0) {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be negative");
+    }
+    if (index >= size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
+    }
+    
     String x = data[index];
 
     for (int i = index; i < size() - 1; i++) {
