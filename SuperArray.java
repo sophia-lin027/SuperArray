@@ -21,6 +21,12 @@ public class SuperArray {
   }
 
   public String get (int index) {
+    if (index < 0.0) {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be negative");
+    }
+    if (index >= size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
+    }
     return data[index];
   }
 
@@ -83,7 +89,7 @@ public class SuperArray {
     if (index < 0.0) {
       throw new IndexOutOfBoundsException("The index " + index + " cannot be negative");
     }
-    if (index >= size()) {
+    if (index > size()) {
       throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
     }
     for (int i = size; i > index; i--) {
