@@ -50,6 +50,8 @@ public class Tester {
     }
     System.out.println(work.remove(19));
     System.out.println(work);
+    System.out.println(work.remove(-2));
+    System.out.println(work.remove(20));
 
     System.out.println(words.lastIndexOf("uni"));
     System.out.println(test1);
