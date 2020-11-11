@@ -80,6 +80,12 @@ public class SuperArray {
   }
 
   public void add (int index, String element) {
+    if (index < 0.0) {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be negative");
+    }
+    if (index >= size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
+    }
     for (int i = size; i > index; i--) {
       data[i] = data[i - 1];
     }
