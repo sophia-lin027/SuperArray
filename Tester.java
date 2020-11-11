@@ -56,5 +56,8 @@ public class Tester {
     System.out.println(test1.get(2));
     //System.out.println(test1.get(-1));
     //System.out.println(test1.get(3));
+
+    //test1.set(-1, "add");
+    //test1.set(4, "add");
   }
 }
