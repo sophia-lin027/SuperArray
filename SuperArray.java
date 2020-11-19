@@ -98,11 +98,19 @@ public class SuperArray {
     if (index > size()) {
       throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
     }
-    for (int i = size; i > index; i--) {
-      data[i] = data[i - 1];
+    if (index == size()) {
+      add(element);
     }
-    data[index] = element;
-    size++;
+    else {
+      if (size == data.length) {
+        resize();
+      }
+      for (int i = size; i > index; i--) {
+        data[i] = data[i - 1];
+      }
+      data[index] = element;
+      size++;
+    }
   }
 
   public String remove (int index) {
@@ -112,7 +120,7 @@ public class SuperArray {
     if (index >= size()) {
       throw new IndexOutOfBoundsException("The index " + index + " must be less than the size");
     }
-    
+
     String x = data[index];
 
     for (int i = index; i < size() - 1; i++) {
